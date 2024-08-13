@@ -104,19 +104,23 @@ function App() {
                         </tr>
                     </thead>
                     <tbody>
-                        {countries.map((country) => {
-                            return (
-                                <tr key={country.id}>
-                                    <td>{country.name}</td>
-                                    <td>{country.gold}</td>
-                                    <td>{country.silver}</td>
-                                    <td>{country.bronze}</td>
-                                    <td>
-                                        <button onClick={() => deleteCountryHandler(country.id)}>삭제</button>
-                                    </td>
-                                </tr>
-                            );
-                        })}
+                        {countries
+                            .sort((a, b) => b.bronze - a.bronze)
+                            .sort((a, b) => b.silver - a.silver)
+                            .sort((a, b) => b.gold - a.gold)
+                            .map((country) => {
+                                return (
+                                    <tr key={country.id}>
+                                        <td>{country.name}</td>
+                                        <td>{country.gold}</td>
+                                        <td>{country.silver}</td>
+                                        <td>{country.bronze}</td>
+                                        <td>
+                                            <button onClick={() => deleteCountryHandler(country.id)}>삭제</button>
+                                        </td>
+                                    </tr>
+                                );
+                            })}
                     </tbody>
                 </table>
             </div>
