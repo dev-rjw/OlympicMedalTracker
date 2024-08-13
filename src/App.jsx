@@ -10,12 +10,12 @@ function App() {
     const [bronze, setBronze] = useState(0);
 
     const addCountryHandler = (e) => {
+        e.preventDefault();
         if (country === "") {
             alert("국가명을 입력해주세요.");
             return;
         }
 
-        e.preventDefault();
         const newCountry = {
             id: new Date().getTime(),
             name: country,
