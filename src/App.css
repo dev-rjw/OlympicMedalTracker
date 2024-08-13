@@ -1,42 +1,94 @@
+body {
+    font-family: Noto Sans KR, Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+    text-align: center;
+    color: #003580;
+    margin-bottom: 20px;
+    font-size: 2rem !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 8px;
+    align-items: flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-field > div {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.input-field > input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
-.card {
-  padding: 2em;
+.button-field > button {
+    padding: 10px 20px !important;
+    background-color: #fc0 !important;
+    color: #333 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    align-self: center !important;
+    margin-right: 2px;
 }
 
-.read-the-docs {
-  color: #888;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #e6e6fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead > tr > th {
+    background-color: #003580;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+tbody > tr > td {
+    vertical-align: middle;
+    color: #333;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+tbody > tr > td > button {
+    background-color: #dc3545;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
 }
