@@ -63,7 +63,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: #e6e6fa;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -78,6 +77,7 @@ thead > tr > th {
 }
 
 tbody > tr > td {
+    background-color: #e6e6fa;
     vertical-align: middle;
     color: #333;
     padding: 12px;
