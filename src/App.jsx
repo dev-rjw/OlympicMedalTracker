@@ -16,6 +16,11 @@ function App() {
             return;
         }
 
+        if (countries.find((element) => element.name === country)) {
+            alert("이미 등록된 국가입니다.");
+            return;
+        }
+
         const newCountry = {
             id: new Date().getTime(),
             name: country,
@@ -35,6 +40,12 @@ function App() {
 
     const updateCountryHandler = (e) => {
         e.preventDefault();
+
+        if (!countries.find((element) => element.name === country)) {
+            alert("등록되지 않은 국가입니다.");
+            return;
+        }
+
         // (1) input창 중에 나라이름에 매칭된 state 정보 가져옴
         // (2) state에 있는 나라이름으로 현재 존재하는 countries 배열에서 찾아야함(find - 내가 수정하려고 하는 대상 국가)
         const targetCountry = countries.find((element) => element.name === country);
