@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Input from "./components/input";
 
 function App() {
     const [countries, setCountries] = useState([]);
@@ -82,22 +83,18 @@ function App() {
         <>
             <h1>2024 파리 올림픽</h1>
             <form className="input-group">
-                <div className="input-field">
-                    <div>국가명</div>
-                    <input type="text" value={country} onChange={(e) => setCountry(e.target.value)} placeholder="국가 입력"></input>
-                </div>
-                <div className="input-field">
-                    <div>금메달</div>
-                    <input type="number" value={gold} onChange={(e) => setGold(e.target.value)}></input>
-                </div>
-                <div className="input-field">
-                    <div>은메달</div>
-                    <input type="number" value={silver} onChange={(e) => setSilver(e.target.value)}></input>
-                </div>
-                <div className="input-field">
-                    <div>동메달</div>
-                    <input type="number" value={bronze} onChange={(e) => setBronze(e.target.value)}></input>
-                </div>
+                <Input value={country} setValue={setCountry}>
+                    국가명
+                </Input>
+                <Input value={gold} setValue={setGold}>
+                    금메달
+                </Input>
+                <Input value={silver} setValue={setSilver}>
+                    은메달
+                </Input>
+                <Input value={bronze} setValue={setBronze}>
+                    동메달
+                </Input>
                 <div className="button-field">
                     <button onClick={addCountryHandler}>국가 추가</button>
                     <button onClick={updateCountryHandler}>업데이트</button>
